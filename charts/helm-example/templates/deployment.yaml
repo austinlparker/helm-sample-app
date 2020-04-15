@@ -28,6 +28,8 @@ spec:
           value: {{ .Values.service.name }}
         - name: SERVICE_VERSION
           value: {{ .Values.service.version }}
+        - name: BUILD_ID
+          value: {{ .Values.service.buildId }}
         ports:
         - containerPort: {{ .Values.service.internalPort }}
         resources:
