@@ -21,6 +21,15 @@ steps:
     dockerfile: Dockerfile  
     build_arguments:
       - SOURCE_FILE=fast
+    on_success:
+      metadata:
+        set:
+          - '${{MyAppDockerImage.imageId}}':
+            - CF_QUALITY: true
+            - Performance: true
+            - Latency: ".89" 
+            - Test_Coverage: "83%"
+            - JIRA: "https://codefresh-io.atlassian.net/browse/MKTG-12"
   DeployMyChart:
     image: 'codefresh/cfstep-helm:3.0.3'
     title: Deploying Helm chart

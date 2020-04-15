@@ -32,8 +32,6 @@ with your own settings (e.g. docker image deployed).
 
 There is also a [codefresh.yml](codefresh.yml) for easy usage with the [Codefresh](codefresh.io) CI/CD platform.
 
-For the direct deployment without storing the helm chart first see [codefresh-do-not-store.yml](codefresh-do-not-store.yml)
-
 More details can be found in [Codefresh documentation](https://codefresh.io/docs/docs/yaml-examples/examples/helm)
 
 ## Using this project with Lightstep

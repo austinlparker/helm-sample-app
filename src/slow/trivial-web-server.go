@@ -44,8 +44,8 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	n := rand.Intn(200) // n will be between 0 and 200
 	if n%7 == 0 {
 		trace.SpanFromContext(ctx).SetAttributes(key.Bool("error", true))
-		fmt.Printf("Sleeping %d s...\n", (n * 5))
-		time.Sleep(time.Duration(n*5) * time.Millisecond)
+		fmt.Printf("Sleeping %d s...\n", (n * 3))
+		time.Sleep(time.Duration(n*3) * time.Millisecond)
 	} else {
 		fmt.Printf("Sleeping %d ms...\n", n)
 		time.Sleep(time.Duration(n) * time.Millisecond)
