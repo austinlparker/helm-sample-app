@@ -20,7 +20,7 @@ steps:
     tag: ${{CF_SHORT_REVISION}}
     dockerfile: Dockerfile  
     build_arguments:
-      - SOURCE_FILE=fast
+      - SOURCE_FILE=slow
     on_success:
       metadata:
         set:
